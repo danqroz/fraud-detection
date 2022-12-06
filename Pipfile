@@ -4,8 +4,17 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pandas = "*"
+seaborn = "*"
+scikit-learn = "*"
 
 [dev-packages]
+ipykernel = "*"
+flake8 = "*"
+isort = "*"
+black = "*"
+ipywidgets = "*"
+mypy = "*"
 
 [requires]
 python_version = "3.9"
