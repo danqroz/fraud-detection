@@ -7,6 +7,10 @@ name = "pypi"
 pandas = "*"
 seaborn = "*"
 scikit-learn = "*"
+python-dotenv = "*"
+wheel = "*"
+setuptools = "*"
+lightgbm = "*"
 
 [dev-packages]
 ipykernel = "*"
