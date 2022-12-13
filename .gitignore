@@ -1,6 +1,8 @@
 # Folders
 data
+.venv
 
 # Files
 *.csv
-
+.env
+*.png
