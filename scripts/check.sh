@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-SOURCE_FILES="app"
+SOURCE_FILES="models"
 [[  $# -ge 1 ]] && SOURCE_FILES=$@
 
 RUN=$([[ $PIPENV_ACTIVE == 1 ]] || echo "pipenv run")
