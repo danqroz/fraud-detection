@@ -1,8 +1,12 @@
 # Folders
 data
 .venv
+.vscode
+**/__pycache__
+**/tmp
 
 # Files
 *.csv
 .env
 *.png
+playground.py
