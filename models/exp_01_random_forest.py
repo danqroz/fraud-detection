@@ -3,6 +3,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, precision_score, recall_score
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from split_data import SplitData
+import joblib
 
 
 def score_model(model, X_test, y_test):
@@ -82,3 +83,5 @@ grid_search.fit(X_train, y_train)
 
 best_model = grid_search.best_estimator_
 best_score = score_model(best_model, X_test, y_test)
+
+joblib.dump(model, "./models_save/random_forest.sav")

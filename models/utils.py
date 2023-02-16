@@ -13,9 +13,9 @@ def _f1_score(y: pd.Series, predictions: np.ndarray[int]) -> float:
     tp = np.sum((y == 1) & (predictions == 1))
     fp = np.sum((y == 0) & (predictions == 1))
     fn = np.sum((y == 1) & (predictions == 0))
-    precision = tp / (tp + fp)
-    recall = tp / (tp + fn)
-    f1_score = 2 * precision * recall / (precision + recall)
+    precision = tp / (tp + fp + 1e-10)
+    recall = tp / (tp + fn + 1e-10)
+    f1_score = 2 * precision * recall / (precision + recall + 1e-10)
     return f1_score
 
 

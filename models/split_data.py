@@ -11,9 +11,11 @@ class SplitData:
     PATH = os.getenv("DATA_PATH")
     TARGET = "Class"
     KEY_VARS = ["Time"]
+    ALL_COLS = [f"V{i}" for i in range(1, 29)]
+    ALL_COLS += ["Amount"]
 
-    def __init__(self) -> None:
-        df = pd.read_csv(self.PATH, usecols=lambda col: col not in self.KEY_VARS)
+    def __init__(self, columns=ALL_COLS) -> None:
+        df = pd.read_csv(self.PATH, usecols=lambda col: col in columns)
         self.X = df.drop(self.TARGET, axis=1)
         self.y = df[self.TARGET]
 
