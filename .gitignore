@@ -8,5 +8,4 @@ data
 # Files
 *.csv
 .env
-*.png
 playground.py
